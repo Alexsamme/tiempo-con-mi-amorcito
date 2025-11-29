@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Álbum — Maracuyá 💛 & Chicha Morada 💜</title>
+
+  <!-- Fuentes y estilos -->
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- contenedor de corazones (animación) -->
+    <div id="corazones-container" aria-hidden="true"></div>
+
+    <!-- PORTADA -->
+    <header class="portada" id="portada">
+      <h1>💜💛 Tiempo Justos 💜 <span class="corazon-amarillo">💛</span></h1>
+
+      <div class="contadores">
+        <div class="contador-block">
+          <h3>Como enamorados</h3>
+          <div id="contador-enamorados" class="contador-value">-- años -- meses --d --h --m --s</div>
+        </div>
+
+        <div class="contador-block">
+          <h3>Como esposos</h3>
+          <div id="contador-esposos" class="contador-value">Por definir</div>
+          <button id="btn-boda" class="btn-audio">dale click amor ❤️</button>
+        </div>
+      </div>
+
+      <div class="btn-area">
+        <button id="verFotos" class="btn-enter">Fotos con mi <span class="chicha">Chicha Morada</span> 💜</button>
+      </div>
+    </header>
+
+    <!-- GALERÍA -->
+    <main id="album" class="album oculto" aria-hidden="true">
+      <!-- imágenes decorativas laterales (Bubu y Dudu) -->
+      <img src="img/10.jpg" class="decor decor-left" alt="Bubu">
+      <img src="img/11.jpg" class="decor decor-right" alt="Dudu">
+
+      <section id="grid" class="grid" aria-label="Galería de fotos">
+        <!-- items del álbum (data-audio coincide con archivos en /musica) -->
+        <div class="item" data-descripcion="Momentos juntos" data-audio="amor.mp3">
+          <div class="item-contenido"><img src="img/1.jpg" alt="Foto 1"></div>
+        </div>
+
+        <div class="item" data-descripcion="Lunes contigo" data-audio="lunes.mp3">
+          <div class="item-contenido"><img src="img/2.jpg" alt="Foto 2"></div>
+        </div>
+
+        <div class="item" data-descripcion="Aurora" data-audio="auroa.mp3">
+          <div class="item-contenido"><img src="img/3.jpg" alt="Foto 3"></div>
+        </div>
+
+        <div class="item" data-descripcion="Me enamoro" data-audio="me enamoro.mp3">
+          <div class="item-contenido"><img src="img/4.jpg" alt="Foto 4"></div>
+        </div>
+
+        <div class="item" data-descripcion="Ladrona" data-audio="ladrona.mp3">
+          <div class="item-contenido"><img src="img/5.jpg" alt="Foto 5"></div>
+        </div>
+
+        <div class="item" data-descripcion="Collar" data-audio="collar.mp3">
+          <div class="item-contenido"><img src="img/6.jpg" alt="Foto 6"></div>
+        </div>
+
+        <div class="item" data-descripcion="Foto 7" data-audio="7.mp3">
+          <div class="item-contenido"><img src="img/7.jpg" alt="Foto 7"></div>
+        </div>
+
+        <div class="item" data-descripcion="Foto 8" data-audio="8.mp3">
+          <div class="item-contenido"><img src="img/8.jpg" alt="Foto 8"></div>
+        </div>
+
+        <div class="item" data-descripcion="Foto 9" data-audio="9.mp3">
+          <div class="item-contenido"><img src="img/9.jpg" alt="Foto 9"></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- VISOR (lightbox) -->
+    <div id="suponer" class="suponer" aria-hidden="true">
+      <div class="contenedor-img" role="dialog" aria-modal="true">
+        <button id="btn-cerrar" class="btn-cerrar" aria-label="Cerrar">✖</button>
+        <img id="suponer-img" src="" alt="Foto ampliada">
+        <p id="suponer-desc" class="descripcion" aria-live="polite"></p>
+      </div>
+    </div>
+
+    <footer class="pie">
+      <p>💛 Hecho con amor por <span class="maracuya">Maracuyá</span> para su <span class="chicha">Chicha Morada</span> 💜</p>
+    </footer>
+  </div>
+
+  <!-- Script principal -->
+  <script src="script.js"></script>
+</body>
+</html>
